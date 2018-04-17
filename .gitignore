@@ -64,4 +64,4 @@ typings/
 .sh
 
 #textos random
-.txt
+*.txt
