@@ -16,6 +16,8 @@ $(function(){
 
     var $app = $('#app');
 
+    
+
     $service1.on('click dbclick mouseover', function(){
         $services.addClass('box--off');
         $services_desc.addClass('box--off');
