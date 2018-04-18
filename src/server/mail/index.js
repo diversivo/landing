@@ -3,15 +3,15 @@ const nodemailer = require('nodemailer');
 const transpoter = nodemailer.createTransport({
     service:'gmail',
     auth:{
-        user:'daniel@dquinteros.cl',
-        pass:'5nilram29!!'
+        user:'jdelpozo@diversivo.cl',
+        pass:'Vision531'
     }
 });
 
 function mail(obj){
     const mailOptions = {
-        from: obj.email,
-        to: 'dquinteros@diversivo.cl', 
+        from: 'jdelpozo@diversivo.cl',
+        to: 'hola@diversivo.cl', 
         subject: 'Contacto diversivo', 
         html: `<p>Nombre:${obj.name}<br/>Correo:${obj.email}<br/>Telefono:${obj.phone}<br/>Asunto:${obj.idea}</p>`
     };
