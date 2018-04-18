@@ -1,10 +1,12 @@
 const serve = require('koa-static-server');
+const enforceHttps = require('koa-sslify');
 const Koa = require('koa');
 const indexRoutes = require('./routes/index');
 
 const app = new Koa();
 const PORT = process.env.PORT || 1337;
 
+app.use(enforceHttps());
 app.use(serve({rootDir:'client',rootPath:'/'}));
 app.use(indexRoutes.routes());
 const server = app.listen(PORT, ()=>{
