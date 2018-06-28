@@ -31,6 +31,16 @@ const webConfig = {
         }
       },
       {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 50000,
+            name: "./font/[name].[ext]",
+          }
+        }
+      },
+      {
         test: /\.scss$/,
         use: [{
           loader: 'style-loader'

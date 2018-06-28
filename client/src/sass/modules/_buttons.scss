@@ -1,0 +1,36 @@
+.btn{
+  padding: .8rem;
+  margin: 1rem 0;
+  color: white;
+  position: relative;
+  &__primary{
+    background-color: #07f19d;
+    color: var(--black);
+    border-radius: 2px;
+    display: inline-block;
+    line-height: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    &:hover{
+      color: var(--white);
+      box-shadow: var(--box-shadow);
+    }
+  }
+}
+.btn__more{
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  padding-left: 2rem;
+  position: relative;
+  &:before{
+    content:'';
+    position: absolute;
+    top: 1.6rem;
+    right: 75%;
+    height: 1px;
+    width: 1.8rem;
+    background-color: var(--white);
+  }
+}

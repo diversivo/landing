@@ -1,0 +1,107 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: 'Aileron';
+
+  --primary-color       :   #e4e4e4;
+  --secondary-color     :   #17BA98;  
+  --btn-primary-color   :   #00995d;
+  --link-primary-color  :   #1EACD9;
+  --white               :   #FFFFFF;
+  --black               :   #252525;
+  --light-grey          :   #F1F1F1;
+  --medium-grey         :   #EBEBEB;
+  --strong-grey         :   #616161;
+  --hover         :   #288cac;
+
+  --positivo            :   #0acd47;
+  --negativo            :   #fc0000;
+
+  --border-radius       :   6px;
+  --box-shadow          :   1px 1px 6px 4px rgba(0, 0, 0, 0.4);
+}
+
+body{
+  height: 100vh;
+}
+
+h1,h2,h3,h4,h5,pre,p{
+  animation-name: show-from-bottom;
+      animation-duration: 2s;
+      animation-delay: 2.5s;
+      animation-direction: normal;
+      animation-fill-mode: both;
+}
+
+h1{
+  font-size: 3rem;
+  line-height: 3rem;
+}
+h2{
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 2.5rem;
+}
+h3{
+  font-size: 1.6rem;
+}
+h4{
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+h5{
+  font-size: 1rem;
+}
+pre{
+  font-size: .7rem;
+  font-weight: 400;
+}
+
+input,textarea{
+  box-shadow: none;
+  background-color: rgba(23, 23, 23, 0.69);
+  color: var(--white);
+  padding: 1rem;
+  border-bottom: 1px solid var(--white);
+  &::placeholder{
+    color: var(--white);
+  }
+  &:hover{
+    border-bottom: 1px solid var(--hover);
+  }
+  &:focus{
+    border-bottom: 1px solid var(--positivo);
+  }
+}
+
+@media only screen and (max-width: 780px){
+ h1{
+   font-size: 1.5rem;
+   line-height: 1.9rem;
+ }
+ h2{
+   font-size: 1rem;
+   line-height: 1.5rem;
+ }
+ h3{
+   font-size: .9rem;
+ }
+ h4{
+   font-size: .8rem;
+ }
+ h5{
+   font-size: .6rem;
+ }
+ a{
+   font-size: .8rem;
+ }
+}
+
+p,h1,h2,h3,h4,h5,span,pre{
+  color: var(--white);
+}

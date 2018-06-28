@@ -1,0 +1,51 @@
+@media only screen and (max-width: 680px){
+
+  .grid{
+    &-main{
+      grid-template-areas:
+      ". description description description number-page"
+      "hero-image hero-image hero-image hero-image number-page"
+      ". . direction direction number-page";
+      grid-gap: 1px;
+    }
+    &-services{
+      grid-template-columns: 1fr 1fr auto;
+      grid-template-rows: auto 1fr 100px 100px;
+      grid-template-areas:
+      "box-title box-title number-page"
+      "description description number-page"
+      "service1 service2 number-page"
+      "service3 service4 number-page";
+    }
+    &-contact{
+      grid-template-columns: 1fr auto;
+      grid-gap: 0px;
+      grid-template-areas:
+      "title number-page"
+      "form number-page";
+    }
+  }
+
+  .service{
+    height: 100px;
+    &:hover{
+      height: 120px;
+      padding-left: .8rem;
+    }
+    .btn{
+      top: 100px;
+      right: 0px;
+      border-bottom: 1px solid var(--white);
+      background-color: rgb(59, 59, 59);
+      &:hover{
+        background-color: var(--white);
+        color: var(--black);
+        }
+    }
+  }
+  .contact{
+    &__form{
+      padding: 0;
+    }
+  }
+}

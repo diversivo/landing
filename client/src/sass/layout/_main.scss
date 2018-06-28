@@ -1,0 +1,237 @@
+.app{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: 20px auto 20px;
+  grid-template-rows: 80px auto 20px;
+  background-color: var(--black);
+  grid-template-areas:
+  ". header ."
+  ". main ."
+  ". footer .";
+
+  header.container__header{
+    grid-area: header;
+    align-self: center;
+    padding: 1rem 0rem;
+    .logo{
+      animation-name: show-from-bottom;
+      animation-duration: 3s;
+      animation-delay: .5s;
+      animation-direction: normal;
+      animation-fill-mode: both;
+    }
+  }
+  main.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem;
+    grid-area: main;
+    border: 1px solid var(--white);
+    animation-name: show-right-to-left;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    h1{
+      animation-name: show-from-bottom;
+      animation-duration: 2s;
+      animation-delay: 2.5s;
+      animation-direction: normal;
+      animation-fill-mode: both;
+      z-index: 1000;
+    }
+    h2{
+      z-index: 1000;
+    }
+    .main-content{
+      margin-top: 1rem;
+      min-height: 60vh;
+    }
+  }
+  footer{
+    grid-area: footer;
+  }
+}
+
+.box-title{
+  grid-area: box-title;
+}
+.description{
+  grid-area: description;
+}
+.direction{
+  grid-area: direction;
+}
+.number-page{
+  grid-area: number-page;
+  align-self: flex-start;
+  justify-self: end;
+  height: 100%;
+  border-right: 1px solid white;
+}
+.contacto{
+  grid-area: contacto;
+}
+
+.service{
+  align-self: stretch;
+  justify-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 1rem;
+  background-color: var(--white);
+  position: relative;
+  transition: all .5s ease-in-out;
+  height: 180px;
+  top: 0;
+  h5{
+    transition: all .1s ease-in-out;
+    top: 0;
+    position: relative;
+  }
+  &:hover{
+    padding-left: 2rem;
+    height: 200px;
+    top: -10px;
+    background-color: var(--black);
+    box-shadow: var(--box-shadow);
+    z-index: 20;
+    transition: all .1s ease-in-out;
+    h5{
+      color: var(--white);
+      top: -20px;
+    }
+    .btn{
+      opacity: 1;
+      position: absolute;
+      top: 100px;
+    }
+  }
+  &:active{
+    background-color: var(--black);
+    h5{
+      color: var(--white);
+    }
+  }
+  .btn{
+    position: absolute;
+    top: 100px;
+    right: -1px;
+    opacity: 0;
+    align-self: flex-end;
+    border-bottom: 1px solid var(--white);
+    width: 100%;
+    text-align: right;
+    color: var(--white);
+    transition: all .5s ease-in-out;
+    &:hover{
+      background-color: var(--white);
+      color: var(--black);
+      }
+  }
+
+  h5{
+    color: var(--black);
+  }
+  &-1{
+    grid-area: service1
+  }
+  &-2{
+    grid-area: service2
+  }
+  &-3{
+    grid-area: service3
+  }
+  &-4{
+    grid-area: service4
+  }
+}
+
+span {
+  font-weight: 700;
+}
+
+.container-2{
+  width: 100%;
+  min-height: 50vh;
+}
+.container-3{
+  width: 100%;
+  min-height: 50vh;
+}
+
+.services__bg{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 1s ease-in-out;
+  background-image:url('/img/fondo-trasparente.png');
+  &{
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+}
+
+.contact{
+  &__info{
+    grid-area: title;
+    width: 100%;
+  }
+  &__form{
+    grid-area: form;
+    form{
+      display:flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      input,textarea{
+        display: inline-block;
+        margin-top: .8rem;
+        width: 80%;
+      }
+    }
+  }
+}
+
+
+.hero-image{
+  grid-area: hero-image;
+  position: relative;
+  img{
+    position: absolute;
+    width: 90%;
+    max-width: 440px;
+    bottom: -50%;
+    right: 1%;
+    left: auto;
+
+    animation-name: show-from-bottom-whith-motion;
+    animation-duration: 3.5s;
+    animation-delay: 5s;
+    right: 5%;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    &:nth-child(1){
+      bottom: -90%;
+      right: 10%;
+      animation-delay: 3s;
+    }
+    &:nth-child(3){
+      bottom: 10%;
+      right: 0%;
+      animation-delay: 7s;
+    }
+  }
+}

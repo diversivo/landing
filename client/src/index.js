@@ -1,3 +1,2 @@
-// import css from './index.scss'
-
-console.log('Working');
+import css from './sass/styles.scss'
+import app from './js/index.js'

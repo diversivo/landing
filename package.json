@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node ./server/index.js",
-    "build": "webpack-serve --config webpack.config.babel.js",
+    "webpack": "webpack-serve --config webpack.config.babel.js",
     "test": "./node_modules/mocha/bin/_mocha"
   },
   "author": "",
@@ -31,10 +31,12 @@
     "babel-preset-env": "^1.7.0",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
+    "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
     "webpack": "^4.12.1",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4",

@@ -1,0 +1,9 @@
+.box--off{
+ opacity: 0;
+ display: none;
+ //position: absolute;
+}
+.box--on{
+  display: inline;
+  opacity: 1;
+}

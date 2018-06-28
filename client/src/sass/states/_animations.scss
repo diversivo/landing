@@ -1,0 +1,20 @@
+
+@keyframes moving {
+  0% {opacity: 1; transform: scale3d(2);filter:blur(5px);}
+  100% {opacity: 1; transform: scale3d(1);filter:blur(0px);}
+}
+
+@keyframes show-right-to-left{
+  0%{opacity: 0; transform: skew(1deg,1deg);}
+  100%{opacity: 1; transform: skew(0,0);}
+}
+
+@keyframes show-from-bottom{
+  0%{ opacity: 0; transform: translateY(-10)}
+  100%{opacity: 1; transform: translateY(0)}
+}
+
+@keyframes show-from-bottom-whith-motion{
+  0%{ opacity: 0;  bottom:20%;}
+  100%{opacity: 1;}
+}
