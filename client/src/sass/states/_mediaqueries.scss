@@ -3,9 +3,9 @@
   .grid{
     &-main{
       grid-template-areas:
-      ". description description description number-page"
+      ". hero-title hero-title hero-title number-page"
       "hero-image hero-image hero-image hero-image number-page"
-      ". . direction direction number-page";
+      "hero-image hero-image hero-image hero-image number-page";
       grid-gap: 1px;
     }
     &-services{

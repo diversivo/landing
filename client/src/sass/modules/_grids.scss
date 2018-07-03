@@ -9,7 +9,7 @@
     grid-template-rows: auto;
     grid-template-areas:
     "hero-title hero-title hero-image hero-image number-page"
-    "hero-legend hero-legend hero-image hero-image number-page"
+    ". . hero-image hero-image number-page"
     ". . . . number-page";
     grid-gap: 5px;
   }
