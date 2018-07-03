@@ -62,8 +62,12 @@
 .box-title{
   grid-area: box-title;
 }
-.description{
-  grid-area: description;
+
+.hero-title{
+  grid-area: hero-title;
+}
+.hero-legend{
+  grid-area: hero-legend;
 }
 .direction{
   grid-area: direction;
@@ -211,9 +215,9 @@ span {
   position: relative;
   img{
     position: absolute;
-    width: 90%;
-    max-width: 440px;
-    bottom: -50%;
+    width: 100%;
+    max-width: 480px;
+    bottom: 20%;
     right: 1%;
     left: auto;
 
@@ -224,12 +228,12 @@ span {
     animation-direction: normal;
     animation-fill-mode: both;
     &:nth-child(1){
-      bottom: -90%;
+      bottom: -20%;
       right: 10%;
       animation-delay: 3s;
     }
     &:nth-child(3){
-      bottom: 10%;
+      bottom: 50%;
       right: 0%;
       animation-delay: 7s;
     }
