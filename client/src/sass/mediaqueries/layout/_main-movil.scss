@@ -1,0 +1,33 @@
+@media only screen and (max-width: 680px){
+    .app{
+        main.container{
+            padding: 1rem;
+        }
+    }
+    .hero-image{
+        img{
+          position: absolute;
+          width: 120%;
+          max-width: 520px;
+          bottom: 30%;
+          right: 50%;
+          left: -10%;
+          animation-name: show-from-bottom-whith-motion;
+          animation-duration: 3.5s;
+          animation-delay: 5s;
+          right: 5%;
+          animation-direction: normal;
+          animation-fill-mode: both;
+          &:nth-child(1){
+            bottom: 10%;
+            right: 1%;
+            animation-delay: 3s;
+          }
+          &:nth-child(3){
+            bottom: 50%;
+            right: 0%;
+            animation-delay: 7s;
+          }
+        }
+      }
+}

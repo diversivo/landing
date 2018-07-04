@@ -2,6 +2,7 @@
 
   .grid{
     &-main{
+      grid-template-columns: 1fr 4fr 2fr 1fr auto;
       grid-template-areas:
       ". hero-title hero-title hero-title number-page"
       "hero-image hero-image hero-image hero-image number-page"
