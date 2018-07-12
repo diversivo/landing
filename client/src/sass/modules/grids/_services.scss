@@ -4,19 +4,18 @@
     grid-gap: 1px;
     grid-template-areas:
     "box-title box-title . number-page"
-    "description description description  number-page"
+    "service-content service-content service-content number-page"
     "service1 service2 service3 number-page";
   }
 
 @media only screen and (max-width: 680px){
     .grid-services{
-      grid-template-columns: 1fr 1fr auto;
-      grid-template-rows: auto 1fr 100px 100px;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      grid-template-rows: auto 1fr 100px;
       grid-template-areas:
-      "box-title box-title number-page"
-      "description description number-page"
-      "service1 service2 number-page"
-      "service3 service4 number-page";
+      "box-title box-title . number-page"
+      "service-content service-content service-content number-page"
+      "service1 service2 service3 number-page"
     }
 }
 
@@ -60,6 +59,7 @@
       color: var(--white);
     }
   }
+
   .btn{
     position: absolute;
     top: 100px;
@@ -72,7 +72,7 @@
     color: var(--white);
     transition: all .5s ease-in-out;
     &:hover{
-      background-color: var(--white);
+      //background-color: var(--white);
       color: var(--black);
       }
   }

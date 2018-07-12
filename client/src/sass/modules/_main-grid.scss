@@ -22,4 +22,28 @@
   }
 }
 
+
+.box-title{
+  grid-area: box-title;
+}
+.sub-title{
+  grid-area: sub-title;
+}
+.service-content{
+  grid-area:service-content;
+}
+.hero-title{
+  grid-area: hero-title;
+}
+.hero-legend{
+  grid-area: hero-legend;
+}
+.direction{
+  grid-area: direction;
+}
+.contacto{
+  grid-area: contacto;
+}
+
+
 @import 'grids/services'

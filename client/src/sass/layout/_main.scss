@@ -59,102 +59,12 @@
   }
 }
 
-.box-title{
-  grid-area: box-title;
-}
-
-.hero-title{
-  grid-area: hero-title;
-}
-.hero-legend{
-  grid-area: hero-legend;
-}
-.direction{
-  grid-area: direction;
-}
 .number-page{
   grid-area: number-page;
   align-self: flex-start;
   justify-self: end;
   height: 100%;
   border-right: 1px solid white;
-}
-.contacto{
-  grid-area: contacto;
-}
-
-.service{
-  align-self: stretch;
-  justify-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding-left: 1rem;
-  background-color: var(--white);
-  position: relative;
-  transition: all .2s ease-in-out;
-  height: 120px;
-  top: 0;
-  h5{
-    transition: all .2s ease-in-out;
-    top: 0;
-    position: relative;
-  }
-  &:hover{
-    padding-left: 2rem;
-    top: -10px;
-    background-color: var(--black);
-    box-shadow: var(--box-shadow);
-    z-index: 20;
-    transition: all .2s ease-in-out;
-    h5{
-      color: var(--white);
-    }
-    .btn{
-      opacity: 1;
-      position: absolute;
-      top: 100px;
-    }
-  }
-  &:active{
-    background-color: var(--black);
-    h5{
-      color: var(--white);
-    }
-  }
-  .btn{
-    position: absolute;
-    top: 100px;
-    right: -1px;
-    opacity: 0;
-    align-self: flex-end;
-    border-bottom: 1px solid var(--white);
-    width: 100%;
-    text-align: right;
-    color: var(--white);
-    transition: all .5s ease-in-out;
-    &:hover{
-      background-color: var(--white);
-      color: var(--black);
-      }
-  }
-
-  h5{
-    color: var(--black);
-  }
-  &-1{
-    grid-area: service1
-  }
-  &-2{
-    grid-area: service2
-  }
-  &-3{
-    grid-area: service3
-  }
-  &-4{
-    grid-area: service4
-  }
 }
 
 span {
