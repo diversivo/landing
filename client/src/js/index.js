@@ -58,8 +58,10 @@ const services = {
     img: bgFondo
   },
   'web': {
-    title: 'Creamos y administramos sitios web sin mentirle a nadie.',
-    desc: 'Desde sitios de alto tráfico a pequeñas pymes que quieren darse a conocer.',
+    pre: 'Desarrollo y diseño web 2.1',
+    title: 'Lleva tus ideas a la web',
+    desc: 'Creamos sitios web desde cero, ofrecemos soluciones variadas, desde sitios auto-administrables a SPA, a sitios que requieren mucha mantención y de alto tráfico.',
+    note: 'Creamos y administramos sitios web sin mentirle a nadie.',
     img: bgWeb
   },
   'software': {

@@ -93,25 +93,23 @@
   padding-left: 1rem;
   background-color: var(--white);
   position: relative;
-  transition: all .5s ease-in-out;
-  height: 180px;
+  transition: all .2s ease-in-out;
+  height: 120px;
   top: 0;
   h5{
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
     top: 0;
     position: relative;
   }
   &:hover{
     padding-left: 2rem;
-    height: 200px;
     top: -10px;
     background-color: var(--black);
     box-shadow: var(--box-shadow);
     z-index: 20;
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
     h5{
       color: var(--white);
-      top: -20px;
     }
     .btn{
       opacity: 1;
@@ -220,7 +218,6 @@ span {
     bottom: 20%;
     right: 1%;
     left: auto;
-
     animation-name: show-from-bottom-whith-motion;
     animation-duration: 3.5s;
     animation-delay: 5s;
