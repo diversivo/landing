@@ -1,11 +1,11 @@
 .grid-services{
-    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr auto;
     grid-template-rows: auto 1fr 180px;
     grid-gap: 1px;
     grid-template-areas:
-    "box-title box-title box-title . number-page"
-    "description description description description number-page"
-    "service1 service2 service3 service4 number-page";
+    "box-title box-title . number-page"
+    "description description description  number-page"
+    "service1 service2 service3 number-page";
   }
 
 @media only screen and (max-width: 680px){
