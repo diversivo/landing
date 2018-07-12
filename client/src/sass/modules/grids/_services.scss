@@ -1,0 +1,95 @@
+.grid-services{
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    grid-template-rows: auto 1fr 180px;
+    grid-gap: 1px;
+    grid-template-areas:
+    "box-title box-title box-title . number-page"
+    "description description description description number-page"
+    "service1 service2 service3 service4 number-page";
+  }
+
+@media only screen and (max-width: 680px){
+    .grid-services{
+      grid-template-columns: 1fr 1fr auto;
+      grid-template-rows: auto 1fr 100px 100px;
+      grid-template-areas:
+      "box-title box-title number-page"
+      "description description number-page"
+      "service1 service2 number-page"
+      "service3 service4 number-page";
+    }
+}
+
+.service{
+  align-self: stretch;
+  justify-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 1rem;
+  background-color: var(--white);
+  position: relative;
+  transition: all .2s ease-in-out;
+  height: 120px;
+  top: 0;
+  h5{
+    transition: all .2s ease-in-out;
+    top: 0;
+    position: relative;
+  }
+  &:hover{
+    padding-left: 2rem;
+    top: -10px;
+    background-color: var(--black);
+    box-shadow: var(--box-shadow);
+    z-index: 20;
+    transition: all .2s ease-in-out;
+    h5{
+      color: var(--white);
+    }
+    .btn{
+      opacity: 1;
+      position: absolute;
+      top: 100px;
+    }
+  }
+  &:active{
+    background-color: var(--black);
+    h5{
+      color: var(--white);
+    }
+  }
+  .btn{
+    position: absolute;
+    top: 100px;
+    right: -1px;
+    opacity: 0;
+    align-self: flex-end;
+    border-bottom: 1px solid var(--white);
+    width: 100%;
+    text-align: right;
+    color: var(--white);
+    transition: all .5s ease-in-out;
+    &:hover{
+      background-color: var(--white);
+      color: var(--black);
+      }
+  }
+
+  h5{
+    color: var(--black);
+  }
+  &-1{
+    grid-area: service1
+  }
+  &-2{
+    grid-area: service2
+  }
+  &-3{
+    grid-area: service3
+  }
+  &-4{
+    grid-area: service4
+  }
+}

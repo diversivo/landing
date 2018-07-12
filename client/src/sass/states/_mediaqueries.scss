@@ -9,15 +9,6 @@
       "hero-image hero-image hero-image hero-image number-page";
       grid-gap: 1px;
     }
-    &-services{
-      grid-template-columns: 1fr 1fr auto;
-      grid-template-rows: auto 1fr 100px 100px;
-      grid-template-areas:
-      "box-title box-title number-page"
-      "description description number-page"
-      "service1 service2 number-page"
-      "service3 service4 number-page";
-    }
     &-contact{
       grid-template-columns: 1fr auto;
       grid-gap: 0px;
