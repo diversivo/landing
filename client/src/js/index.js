@@ -76,7 +76,7 @@ const serviceClickHandler = (event) => {
 
   document.getElementById('services').firstElementChild.innerHTML = description.title;
   servicesDesc.firstElementChild.innerHTML = description.desc;
-  servicesDesc.firstElementChild.innerHTML = `<img src="${description.img.src}">`;
+  servicesDesc.innerHTML = `<img src="${description.img.src}">`;
   document.body.style.backgroundImage = `url('${description.bg.src}')`;
 };
 
