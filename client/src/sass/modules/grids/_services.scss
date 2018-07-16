@@ -20,38 +20,10 @@
 }
 
 .service{
-  align-self: stretch;
-  justify-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding-left: 1rem;
-  background-color: var(--white);
-  position: relative;
-  transition: all .2s ease-in-out;
-  height: 120px;
-  top: 0;
   h5{
     transition: all .2s ease-in-out;
     top: 0;
     position: relative;
-  }
-  &:hover{
-    padding-left: 2rem;
-    top: -10px;
-    background-color: var(--black);
-    box-shadow: var(--box-shadow);
-    z-index: 20;
-    transition: all .2s ease-in-out;
-    h5{
-      color: var(--white);
-    }
-    .btn{
-      opacity: 1;
-      position: absolute;
-      top: 100px;
-    }
   }
   &:active{
     background-color: var(--black);
@@ -78,7 +50,7 @@
   }
 
   h5{
-    color: var(--black);
+    color: var(--white);
   }
   &-1{
     grid-area: service1
@@ -91,5 +63,27 @@
   }
   &-4{
     grid-area: service4
+  }
+}
+
+.service-button{
+  text-align: center;
+  border-bottom: 1px solid var(--medium-grey);
+  align-self: stretch;
+  justify-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  transition: all .2s ease-in-out;
+  height: 90px;
+  top: 0;
+  &:hover{
+    padding-left: 2rem;
+    top: -10px;
+    background-color: var(--black);
+    box-shadow: var(--box-shadow);
+    z-index: 20;
+    transition: all .2s ease-in-out;
   }
 }
