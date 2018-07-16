@@ -77,12 +77,60 @@
   transition: all .2s ease-in-out;
   height: 90px;
   top: 0;
+  cursor: pointer;
   &:hover{
-    padding-left: 2rem;
     top: -10px;
     background-color: var(--black);
     box-shadow: var(--box-shadow);
     z-index: 20;
     transition: all .2s ease-in-out;
+  }
+}
+
+.service-content{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  h1{
+    z-index: 1000;
+    position: relative;
+  }
+  img{
+    align-content: center;
+    margin: 0 auto;
+    position: absolute;
+  }
+  .img-web{
+    top: 1%;
+    left: 22%;
+  }
+}
+
+
+.services-box{
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  .title{
+    position: relative;
+    &-web{
+      right: 10%;
+    }
+  }
+}
+
+.circle{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  &-web{
+    top: 60%;
+    right: 20%;
   }
 }

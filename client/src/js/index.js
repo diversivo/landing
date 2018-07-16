@@ -35,17 +35,14 @@ function checkContent(content){
   name.setCustomValidity('');
 }
 
-
 const bgMovil = new Image();
 const bgWeb = new Image();
 const bgDesarrollo = new Image();
-
 const servWeb = new Image();
 
 bgMovil.src = '/img/bg-movil.jpg';
 bgWeb.src = '/img/bg-web.jpg';
 bgDesarrollo.src = '/img/bg-desarrollo.jpg';
-
 servWeb.src = '/img/circle-service-web.png';
 
 const services = {
@@ -56,11 +53,14 @@ const services = {
   },
   'web': {
     pre: 'Desarrollo y diseño web 2.1',
-    title: 'Lleva tus ideas a la web',
+    title: 'Lleva tus<br> ideas a <br>la web',
     desc: 'Creamos sitios web desde cero, ofrecemos soluciones variadas, desde sitios auto-administrables a SPA, a sitios que requieren mucha mantención y de alto tráfico.',
     note: 'Creamos y administramos sitios web sin mentirle a nadie.',
     bg: bgWeb,
-    img: servWeb
+    img: servWeb,
+    circle: 'circle-web',
+    imageClass: 'img-web',
+    titleClass: 'title-web'
   },
   'software': {
     title: 'Frontend y Backend a tus servicios.',
@@ -74,9 +74,15 @@ const serviceClickHandler = (event) => {
   let description = services[event.currentTarget.id];
   let servicesDesc = document.getElementById('services-desc');
 
-  document.getElementById('services').firstElementChild.innerHTML = description.title;
-  servicesDesc.firstElementChild.innerHTML = description.desc;
-  servicesDesc.innerHTML = `<img src="${description.img.src}">`;
+  const info = `
+              <div class="services-box">
+              <h1 class="${description.titleClass}">${description.title}</h1>
+              <img class="${description.imageClass}" src="${description.img.src}">
+              <div class="circle ${description.circle}"></div>
+              </div>
+              `
+
+  servicesDesc.innerHTML = info;
   document.body.style.backgroundImage = `url('${description.bg.src}')`;
 };
 
