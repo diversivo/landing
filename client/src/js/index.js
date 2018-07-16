@@ -37,46 +37,47 @@ function checkContent(content){
 
 
 const bgMovil = new Image();
-const bgFondo = new Image();
 const bgWeb = new Image();
 const bgDesarrollo = new Image();
 
+const servWeb = new Image();
+
 bgMovil.src = '/img/bg-movil.jpg';
-bgFondo.src = '/img/bg-fondo.jpg';
 bgWeb.src = '/img/bg-web.jpg';
 bgDesarrollo.src = '/img/bg-desarrollo.jpg';
+
+servWeb.src = '/img/circle-service-web.png';
 
 const services = {
   'apps': {
     title: 'Creamos video juegos y aplicaciones híbridas o para Android',
     desc: 'Modernizamos tu flujo de trabajo con tecnología que facilita tu día a día',
-    img: bgMovil
-  },
-  'rrss': {
-    title: 'Lleva tu marca a una fauna digital',
-    desc: 'Conéctate comparte, y manda uno que otro emoticon :).',
-    img: bgFondo
+    bg: bgMovil
   },
   'web': {
     pre: 'Desarrollo y diseño web 2.1',
     title: 'Lleva tus ideas a la web',
     desc: 'Creamos sitios web desde cero, ofrecemos soluciones variadas, desde sitios auto-administrables a SPA, a sitios que requieren mucha mantención y de alto tráfico.',
     note: 'Creamos y administramos sitios web sin mentirle a nadie.',
-    img: bgWeb
+    bg: bgWeb,
+    img: servWeb
   },
   'software': {
     title: 'Frontend y Backend a tus servicios.',
     desc: 'Creamos y desarrollamos tecnología en base a tus necesidades.',
-    img: bgDesarrollo
+    bg: bgDesarrollo
   }
 
 };
 
 const serviceClickHandler = (event) => {
   let description = services[event.currentTarget.id];
+  let servicesDesc = document.getElementById('services-desc');
+
   document.getElementById('services').firstElementChild.innerHTML = description.title;
-  document.getElementById('services-desc').firstElementChild.innerHTML = description.desc;
-  document.body.style.backgroundImage = `url('${description.img.src}')`;
+  servicesDesc.firstElementChild.innerHTML = description.desc;
+  servicesDesc.firstElementChild.innerHTML = `<img src="${description.img.src}">`;
+  document.body.style.backgroundImage = `url('${description.bg.src}')`;
 };
 
 const servicesArray = Array.from(document.getElementsByClassName('service'))
