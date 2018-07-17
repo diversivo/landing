@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+  console.log('pollito')
+})
+
 function checkEmail(email){
 
   const re =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -38,18 +42,27 @@ function checkContent(content){
 const bgMovil = new Image();
 const bgWeb = new Image();
 const bgDesarrollo = new Image();
-const servWeb = new Image();
+const circleimgMovil = new Image();
+const circleimgWeb = new Image();
+const circleimgDesarrollo = new Image();
+
 
 bgMovil.src = '/img/bg-movil.jpg';
 bgWeb.src = '/img/bg-web.jpg';
 bgDesarrollo.src = '/img/bg-desarrollo.jpg';
-servWeb.src = '/img/circle-service-web.png';
+circleimgMovil.src = '/img/circle-service-movil.png';
+circleimgWeb.src = '/img/circle-service-web.png';
+circleimgDesarrollo.src = '/img/circle-service-dev.png';
 
 const services = {
   'apps': {
-    title: 'Creamos video juegos y aplicaciones híbridas o para Android',
+    title: 'Creamos aplicaciones<br> híbridas para <br>todos los gustos',
     desc: 'Modernizamos tu flujo de trabajo con tecnología que facilita tu día a día',
-    bg: bgMovil
+    bg: bgMovil,
+    img: circleimgMovil,
+    circle: 'circle-movil',
+    imageClass: 'img-movil',
+    titleClass: 'title-movil'
   },
   'web': {
     pre: 'Desarrollo y diseño web 2.1',
@@ -57,15 +70,19 @@ const services = {
     desc: 'Creamos sitios web desde cero, ofrecemos soluciones variadas, desde sitios auto-administrables a SPA, a sitios que requieren mucha mantención y de alto tráfico.',
     note: 'Creamos y administramos sitios web sin mentirle a nadie.',
     bg: bgWeb,
-    img: servWeb,
+    img: circleimgWeb,
     circle: 'circle-web',
     imageClass: 'img-web',
     titleClass: 'title-web'
   },
   'software': {
-    title: 'Frontend y Backend a tus servicios.',
+    title: 'Frontend <br>y Backend <br>a tus servicios.',
     desc: 'Creamos y desarrollamos tecnología en base a tus necesidades.',
-    bg: bgDesarrollo
+    bg: bgDesarrollo,
+    img: circleimgDesarrollo,
+    circle: 'circle-desarrollo',
+    imageClass: 'img-desarrollo',
+    titleClass: 'title-desarrollo'
   }
 
 };

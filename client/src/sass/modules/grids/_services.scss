@@ -21,8 +21,6 @@
 
 .service{
   h5{
-    transition: all .2s ease-in-out;
-    top: 0;
     position: relative;
   }
   &:active{
@@ -44,7 +42,6 @@
     color: var(--white);
     transition: all .5s ease-in-out;
     &:hover{
-      //background-color: var(--white);
       color: var(--black);
       }
   }
@@ -83,7 +80,6 @@
     background-color: var(--black);
     box-shadow: var(--box-shadow);
     z-index: 20;
-    transition: all .2s ease-in-out;
   }
 }
 
@@ -94,8 +90,15 @@
   h1{
     z-index: 1000;
     position: relative;
+    letter-spacing: 2px;
+    line-height: 3.5rem;
   }
   img{
+    animation-name: moving;
+    animation-duration: 1s;
+    animation-delay: .2s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
     align-content: center;
     margin: 0 auto;
     position: absolute;
@@ -103,6 +106,14 @@
   .img-web{
     top: 1%;
     left: 22%;
+  }
+  .img-movil{
+    top: 1%;
+    left: 15%;
+  }
+  .img-desarrollo{
+    top: 4%;
+    left: 20%;
   }
 }
 
@@ -116,14 +127,24 @@
   .title{
     position: relative;
     &-web{
-      right: 10%;
+      right: 15%;
+    }
+    &-movil{
+      right: 20%;
+      right: -20%;
+    }
+    &-desarrollo{
+      right: -23%;
+      top: 10%;
     }
   }
 }
 
 .circle{
-  width: 50px;
-  height: 50px;
+  $tamaño: 60px;
+
+  width: $tamaño;
+  height: $tamaño;
   border-radius: 50%;
   background-color: white;
   padding: 0;
@@ -132,5 +153,28 @@
   &-web{
     top: 60%;
     right: 20%;
+    background: linear-gradient(
+                  45deg,
+                  #06ffc9,
+                  #ff06a0
+    )
+  }
+  &-movil{
+    top: 65%;
+    right: 30%;
+    background: linear-gradient(
+                  45deg,
+                  #fbff06,
+                  #ff06a0
+    )
+  }
+  &-desarrollo{
+    top: 20%;
+    right: 20%;
+    background: linear-gradient(
+                  45deg,
+                  #06ffc9,
+                  #ff6106
+    )
   }
 }
