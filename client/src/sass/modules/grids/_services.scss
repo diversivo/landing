@@ -20,15 +20,6 @@
 }
 
 .service{
-  h5{
-    position: relative;
-  }
-  &:active{
-    background-color: var(--black);
-    h5{
-      color: var(--white);
-    }
-  }
 
   .btn{
     position: absolute;
@@ -81,6 +72,15 @@
     box-shadow: var(--box-shadow);
     z-index: 20;
   }
+  h5{
+    position: relative;
+  }
+  &:active{
+    background-color: var(--black);
+    h5{
+      color: var(--white);
+    }
+  }
 }
 
 .service-content{
@@ -92,7 +92,7 @@
     position: relative;
     letter-spacing: 2px;
     line-height: 3.5rem;
-    height: 400px;
+    max-height: 400px;
   }
   img{
     animation-name: moving;
@@ -177,5 +177,25 @@
                   #06ffc9,
                   #ff6106
     )
+  }
+}
+
+
+.services-desc{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.service__text{
+  width: 50%;
+}
+.service__img{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 50%;
+  & img{
+    height: 250px;
   }
 }

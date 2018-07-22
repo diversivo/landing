@@ -45,7 +45,7 @@ const bgDesarrollo = new Image();
 const circleimgMovil = new Image();
 const circleimgWeb = new Image();
 const circleimgDesarrollo = new Image();
-
+const handIcon = new Image();
 
 bgMovil.src = '/img/bg-movil.jpg';
 bgWeb.src = '/img/bg-web.jpg';
@@ -53,6 +53,26 @@ bgDesarrollo.src = '/img/bg-desarrollo.jpg';
 circleimgMovil.src = '/img/circle-service-movil.png';
 circleimgWeb.src = '/img/circle-service-web.png';
 circleimgDesarrollo.src = '/img/circle-service-dev.png';
+
+handIcon.src = '/img/svg/hand.svg';
+
+const servicesDesc = document.getElementById('services-desc');
+
+const servicePresentation = 
+      `
+        <div class="service__text">
+            <h1>Conectamos tecnología con experiencias en medios digitales.
+            </h1>
+            <p>Nuestra filosofía se basa en el trabajo satisfactorio y la felicidad. Por eso tomamos pocos proyectos a la vez: trabajando  de forma intensiva en ellos para profundizar y entregar  soluciones  de calidad y robustas.</p>
+        </div>
+        <div class="service__img">
+             <img src="${handIcon.src}" alt="hand icon">
+             <img src="" alt="">
+         </div>
+
+      `
+
+servicesDesc.innerHTML = servicePresentation;
 
 const services = {
   'apps': {
@@ -89,8 +109,6 @@ const services = {
 
 const serviceClickHandler = (event) => {
   let description = services[event.currentTarget.id];
-  let servicesDesc = document.getElementById('services-desc');
-
   const info = `
               <div class="services-box">
               <h1 class="${description.titleClass}">${description.title}</h1>
@@ -98,7 +116,6 @@ const serviceClickHandler = (event) => {
               <div class="circle ${description.circle}"></div>
               </div>
               `
-
   servicesDesc.innerHTML = info;
   document.body.style.backgroundImage = `url('${description.bg.src}')`;
 };
