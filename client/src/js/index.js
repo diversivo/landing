@@ -46,6 +46,7 @@ const circleimgMovil = new Image();
 const circleimgWeb = new Image();
 const circleimgDesarrollo = new Image();
 const handIcon = new Image();
+const line = new Image();
 
 bgMovil.src = '/img/bg-movil.jpg';
 bgWeb.src = '/img/bg-web.jpg';
@@ -55,6 +56,7 @@ circleimgWeb.src = '/img/circle-service-web.png';
 circleimgDesarrollo.src = '/img/circle-service-dev.png';
 
 handIcon.src = '/img/svg/hand.svg';
+line.src = '/img/svg/line.svg'
 
 const servicesDesc = document.getElementById('services-desc');
 
@@ -67,7 +69,11 @@ const servicePresentation =
         </div>
         <div class="service__img">
              <img src="${handIcon.src}" alt="hand icon">
-             <img src="" alt="">
+             <img src="${line.src}" alt="line">
+             <div class="service-border-cicle">
+                <div class="service-fill-cicle"></div>
+             </div>
+
          </div>
 
       `
