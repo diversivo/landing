@@ -65,6 +65,7 @@
   transition: all .2s ease-in-out;
   height: 90px;
   top: 0;
+  z-index: 100;
   cursor: pointer;
   &:hover{
     top: -10px;
@@ -183,7 +184,7 @@
 
 .services-desc{
   display: flex;
-  align-content: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: nowrap;
 }
@@ -192,10 +193,41 @@
 }
 .service__img{
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   width: 50%;
-  & img{
-    height: 250px;
-  }
+}
+
+.service-border-cicle{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  $tamaño: 410px;
+  width: $tamaño;
+  height: $tamaño;
+  border-radius: 50%;
+  background: linear-gradient(
+                  45deg,
+                  #06ffc9,
+                  #ff06a0
+    )
+}
+
+.service-fill-cicle{
+  position: absolute;
+  $tamaño: 390px;
+  width: $tamaño;
+  height: $tamaño;
+  border-radius: 50%;
+  background-color: var(--black)
+}
+
+
+.hand-icon{
+  height: 250px;
+  z-index: 10;
+}
+.line{
+  height: 500px;
 }

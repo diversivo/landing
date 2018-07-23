@@ -68,8 +68,8 @@ const servicePresentation =
             <p>Nuestra filosofía se basa en el trabajo satisfactorio y la felicidad. Por eso tomamos pocos proyectos a la vez: trabajando  de forma intensiva en ellos para profundizar y entregar  soluciones  de calidad y robustas.</p>
         </div>
         <div class="service__img">
-             <img src="${handIcon.src}" alt="hand icon">
-             <img src="${line.src}" alt="line">
+             <img class="hand-icon" src="${handIcon.src}" alt="hand icon">
+             <img class="line" src="${line.src}" alt="line">
              <div class="service-border-cicle">
                 <div class="service-fill-cicle"></div>
              </div>
