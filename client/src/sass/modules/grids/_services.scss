@@ -111,7 +111,7 @@
   }
   .img-movil{
     top: 1%;
-    left: 15%;
+    left: 36%;
   }
   .img-desarrollo{
     top: 4%;
@@ -132,12 +132,12 @@
       right: 15%;
     }
     &-movil{
+      top: 20%;
       right: 20%;
-      right: -20%;
     }
     &-desarrollo{
       right: -23%;
-      top: 10%;
+      top: 40%;
     }
   }
 }
@@ -230,4 +230,10 @@
 }
 .line{
   height: 500px;
+}
+
+.service-close__container{
+  position: absolute;
+  top: 60px;
+  right: 60px;
 }

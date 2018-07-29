@@ -16,3 +16,53 @@
   font-weight: var(--font-light);
   text-transform: uppercase;
 }
+
+
+
+
+.close{
+  &__container{
+     width: 60px;
+     height: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     &:hover{
+       .close__icon{
+        animation-name: rotate-45;
+        animation-duration: .3s;
+        animation-delay: .1s;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+          &:before{
+            animation-name: rotate-90;
+            animation-duration: .3s;
+            animation-delay: 0s;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+          }
+       }
+     }
+  }
+  &__icon{
+    width: 50px;
+    height: 10px;
+    border: 2px solid white;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    &:before{
+      content: '';
+      width: 48px;
+      height: 10px;
+      border: 2px solid white;
+      transform: rotate(90deg);
+      position: absolute;
+      top: -2px;
+      left: -1px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-color: var(--black);
+    }
+  }
+}

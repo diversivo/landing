@@ -47,6 +47,7 @@ const circleimgWeb = new Image();
 const circleimgDesarrollo = new Image();
 const handIcon = new Image();
 const line = new Image();
+const transparente = new Image();
 
 bgMovil.src = '/img/bg-movil.jpg';
 bgWeb.src = '/img/bg-web.jpg';
@@ -54,6 +55,7 @@ bgDesarrollo.src = '/img/bg-desarrollo.jpg';
 circleimgMovil.src = '/img/circle-service-movil.png';
 circleimgWeb.src = '/img/circle-service-web.png';
 circleimgDesarrollo.src = '/img/circle-service-dev.png';
+transparente.src = '/img/fondo-transparente.png';
 
 handIcon.src = '/img/svg/hand.svg';
 line.src = '/img/svg/line.svg'
@@ -76,7 +78,7 @@ const servicePresentation =
 
          </div>
 
-      `
+      `;
 
 servicesDesc.innerHTML = servicePresentation;
 
@@ -120,16 +122,27 @@ const serviceClickHandler = (event) => {
               <h1 class="${description.titleClass}">${description.title}</h1>
               <img class="${description.imageClass}" src="${description.img.src}">
               <div class="circle ${description.circle}"></div>
+              <div class="close__container service-close__container" id="js-service-close">
+                  <div class="close__icon"></div>
+              </div>
               </div>
               `
   servicesDesc.innerHTML = info;
   document.body.style.backgroundImage = `url('${description.bg.src}')`;
+
+  const closeService = document.getElementById('js-service-close');
+  closeService.addEventListener('click', () => {
+    servicesDesc.innerHTML = servicePresentation;
+    document.body.style.backgroundImage = `url('${transparente.src}')`;
+  }) 
+
 };
 
 const servicesArray = Array.from(document.getElementsByClassName('service'))
 servicesArray.map((s) => s.addEventListener('click', serviceClickHandler, true));
 
 
+// cerrar el servicio actual y volver a la presentacion de los servicios
 
 
 
