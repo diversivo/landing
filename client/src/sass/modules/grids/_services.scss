@@ -8,7 +8,7 @@
     "service1 service2 service3 number-page";
   }
 
-@media only screen and (max-width: 680px){
+@media only screen and (max-width: 680px) and (min-width: 480px){
     .grid-services{
       grid-template-columns: 1fr 1fr 1fr auto;
       grid-template-rows: auto 1fr 100px;
@@ -17,24 +17,27 @@
       "service-content service-content service-content number-page"
       "service1 service2 service3 number-page"
     }
+
+    .service{
+      height: 100px;
+      &:hover{
+        height: 120px;
+        padding-left: .8rem;
+      }
+      .btn{
+        top: 100px;
+        right: 0px;
+        border-bottom: 1px solid var(--white);
+        background-color: rgb(59, 59, 59);
+        &:hover{
+          background-color: var(--white);
+          color: var(--black);
+          }
+      }
+    }
 }
 
 .service{
-  .btn{
-    position: absolute;
-    top: 100px;
-    right: -1px;
-    opacity: 0;
-    align-self: flex-end;
-    border-bottom: 1px solid var(--white);
-    width: 100%;
-    text-align: right;
-    color: var(--white);
-    transition: all .5s ease-in-out;
-    &:hover{
-      color: var(--black);
-      }
-  }
   h5{
     color: var(--white);
   }
@@ -90,7 +93,7 @@
     z-index: 1000;
     position: relative;
     letter-spacing: 2px;
-    max-height: 400px;
+    max-height: 220px;
   }
   img{
     animation-name: moving;
@@ -237,6 +240,10 @@
 
 
 @media only screen and (max-width: 490px){
+  .grid-services{
+    grid-template-rows: auto 1fr 50px;
+  }
+  
   .service-content{
     flex-direction: column;
     position: relative;
@@ -293,5 +300,13 @@
   .service-close__container{
     top: 10px;
     right: 10px;
+  }
+
+  .service{
+    height: 50px;
+    &:hover{
+      height: 60px;
+      padding-left: 0rem;
+    }
   }
 }

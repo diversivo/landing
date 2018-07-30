@@ -17,24 +17,6 @@
       "form number-page";
     }
   }
-
-  .service{
-    height: 100px;
-    &:hover{
-      height: 120px;
-      padding-left: .8rem;
-    }
-    .btn{
-      top: 100px;
-      right: 0px;
-      border-bottom: 1px solid var(--white);
-      background-color: rgb(59, 59, 59);
-      &:hover{
-        background-color: var(--white);
-        color: var(--black);
-        }
-    }
-  }
   .contact{
     &__form{
       padding: 0;
