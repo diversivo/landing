@@ -31,6 +31,8 @@ function checkName(name){
   name.setCustomValidity('');
 }
 
+
+
 function checkContent(content){
   if(!(/^[A-Za-z.,\d\s]+$/).test(String(content.value))){
       name.setCustomValidity('Solo puede contener , . letras y números');
