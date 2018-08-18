@@ -1,4 +1,8 @@
 
+#blocking-div{
+  display: none!important;
+}
+
 @keyframes moving {
   0% {opacity: 1; transform: scale3d(2);filter:blur(5px);}
   100% {opacity: 1; transform: scale3d(1);filter:blur(0px);}
