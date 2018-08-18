@@ -8,7 +8,7 @@
     "service1 service2 service3 number-page";
   }
 
-@media only screen and (max-width: 680px) and (min-width: 480px){
+@media only screen and (max-width: var(--medium)) and (min-width: var(--small)){
     .grid-services{
       grid-template-columns: 1fr 1fr 1fr auto;
       grid-template-rows: auto 1fr 100px;
@@ -38,9 +38,6 @@
 }
 
 .service{
-  h5{
-    color: var(--white);
-  }
   &-1{
     grid-area: service1
   }
@@ -239,7 +236,7 @@
 }
 
 
-@media only screen and (max-width: 490px){
+@media only screen and (max-width: var(--small)){
   .grid-services{
     grid-template-rows: auto 1fr 50px;
   }
@@ -308,5 +305,14 @@
       height: 60px;
       padding-left: 0rem;
     }
+  }
+}
+
+@media only screen and (max-width: var(--medium)) and (min-width: var(--small)){
+  .service__text{
+    width: 80%;
+  }
+  .service__img{
+    width: 20%;
   }
 }
