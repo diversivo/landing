@@ -1,9 +1,10 @@
 .app{
+  overflow-x: hidden;
+  display: none;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   height: 100vh;
-  display: grid;
   grid-gap: 0px;
   grid-template-columns: 20px auto 20px;
   grid-template-rows: 80px auto 20px;
@@ -11,7 +12,7 @@
   grid-template-areas:
   ". header ."
   ". main ."
-  ". footer .";
+  ". footer ."; 
 
   header.container__header{
     grid-area: header;
