@@ -24,9 +24,9 @@ const servicesDesc = document.getElementById('services-desc');
 const servicePresentation = 
       `
         <div class="service__text">
-            <h1>Conectamos tecnología con experiencias en medios digitales.
+            <h1>Desarrollamos tecnología y experiencias en medios digitales.
             </h1>
-            <p>Nuestra filosofía se basa en el trabajo satisfactorio y la felicidad. Por eso tomamos pocos proyectos a la vez: trabajando  de forma intensiva en ellos para profundizar y entregar  soluciones  de calidad y robustas.</p>
+            <p>Nuestra filosofía se basa en el trabajo satisfactorio y la felicidad. Por eso tomamos pocos proyectos a la vez; para trabajar de forma intensiva y profunda. Entregando soluciones de calidad y robustas.</p>
         </div>
         <div class="service__img">
              <img class="hand-icon" src="${handIcon.src}" alt="hand icon">
