@@ -3,6 +3,7 @@
   width: 100%;
   &-main,&-services,&-contact{
     height: 95vh;
+    max-height: 700px;
   }
   &-main{
     grid-template-columns: 1fr 4fr 2fr 1fr auto;
@@ -43,6 +44,16 @@
 }
 .contacto{
   grid-area: contacto;
+}
+
+@media only screen and (max-width: $small){
+  .grid-contact{
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "title title number-page"
+    "form form number-page";
+  }
 }
 
 

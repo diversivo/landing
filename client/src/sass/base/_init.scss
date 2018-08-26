@@ -27,17 +27,18 @@
 
   --font-light         :   100;
   --line-height   :   3rem;
-
-  --small     :     480px;
-  --medium    :     720px;
-  --large     :     1240px;
-
 }
+
+$small: 480px;
+$medium: 780px;
+$large: 1024px;
 
 
 body{
-  height: 100vh;
+  min-height: 100vh;
   font-size: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 }
 h1,h2,h3,h4,h5,pre,p{
   color: var(--white);
@@ -71,21 +72,41 @@ pre{
 p{
   --font-size:   1.2em;
 }
+fieldset{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+label{
+  color: var(--white);
+}
+
 input,textarea{
   box-shadow: none;
   background-color: rgba(23, 23, 23, 0.69);
   color: var(--white);
   padding: 1rem;
-  border-bottom: 1px solid var(--white);
+  margin: 2rem 0rem;
+  border: 1px solid var(--medium-grey);
+  border-radius: 3px;
   &::placeholder{
     color: var(--white);
   }
   &:hover{
-    border-bottom: 1px solid var(--hover);
+    border: 1px solid var(--hover);
   }
   &:focus{
-    border-bottom: 1px solid var(--positivo);
+    border: 1px solid var(--positivo);
+    &::placeholder{
+      opacity: 0;
+    }
   }
+
 }
 
 @media only screen and (max-width: 780px) and (min-width: 480px){
@@ -97,6 +118,9 @@ body{
 @media only screen and (max-width: 480px){
   body{
     font-size: 80%;
+  }
+  h1{
+    --font-size     :   2.1em;
   }
 }
 
