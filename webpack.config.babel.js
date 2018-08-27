@@ -1,16 +1,14 @@
 const path = require('path');
 
 const webConfig = {
-  mode: 'development',
   target: 'web',
   context: path.resolve('.'),
-  watch: true,
   entry: {
     index: './client/src/index.js'
   },
   output: {
-    path: path.resolve(__dirname, '/client/dist'),
-    publicPath: "/client/public",
+    path: path.resolve(__dirname, './client/build'),
+    publicPath:'/client/public',
     filename: 'bundle.js'
   },
   module: {
@@ -51,15 +49,7 @@ const webConfig = {
         }]
       }
     ]
-  },
-  serve: {
-    logTime: true,
-    hot: {
-      logTime: true,
-    },
-    port: 3030,
-    content: './client/public',
-  },
+  }
 }
 
 module.exports = webConfig

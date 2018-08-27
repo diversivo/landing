@@ -8,8 +8,9 @@
     "url": "git://github.com/diversivo/landing.git"
   },
   "scripts": {
-    "start": "node ./server/index.js",
-    "webpack": "webpack-serve --config webpack.config.babel.js",
+    "start": "npm run build && node ./server/index.js",
+    "webpack": "webpack-serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js && cp -R client/public/** client/build/ ",
     "test": "./node_modules/mocha/bin/_mocha"
   },
   "author": "",
@@ -29,10 +30,13 @@
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-env": "^1.7.0",
+    "chai": "4.1.2",
+    "chai-http": "^4.0.0",
     "css-loader": "^1.0.0",
     "express": "^4.16.3",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
+    "mocha": "5.2.0",
     "node-sass": "^4.9.2",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
@@ -40,9 +44,7 @@
     "webpack": "^4.16.1",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4",
-    "webpack-serve": "^2.0.2",
-    "chai": "4.1.2",
-    "chai-http": "^4.0.0",
-    "mocha": "5.2.0"
+    "webpack-merge": "^4.1.4",
+    "webpack-serve": "^2.0.2"
   }
 }
