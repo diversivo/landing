@@ -76,5 +76,4 @@ typings/
 .DS_Store
 
 # Project specific
-client/build
 .vscode
