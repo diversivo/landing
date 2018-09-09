@@ -1,28 +1,3 @@
-.grid-services{
-    grid-template-columns: 1fr 1fr 1fr auto;
-    grid-template-rows: auto 1fr 180px;
-    grid-gap: 1px;
-    grid-template-areas:
-    "box-title box-title . number-page"
-    "service-content service-content service-content number-page"
-    "service1 service2 service3 number-page";
-  }
-
-.service{
-  &-1{
-    grid-area: service1
-  }
-  &-2{
-    grid-area: service2
-  }
-  &-3{
-    grid-area: service3
-  }
-  &-4{
-    grid-area: service4
-  }
-}
-
 .service-button{
   text-align: center;
   align-self: stretch;
@@ -258,10 +233,6 @@
 }
 
 @media only screen and (max-width: $small){
-  .grid-services{
-    grid-template-rows: auto 1fr 50px;
-  }
-  
   .service-content{
     flex-direction: column;
     position: relative;
