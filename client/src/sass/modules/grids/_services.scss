@@ -136,12 +136,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 58%;
     z-index: 1000;
     h1{
       max-width: 450px;
-      padding-bottom: 45px;
     }
     p{
       max-width: 460px;
@@ -196,14 +195,6 @@
 }
 
 @media only screen and (max-width: $medium) and (min-width: $small){
-  .grid-services{
-    grid-template-columns: 1fr 1fr 1fr auto;
-    grid-template-rows: auto 1fr 100px;
-    grid-template-areas:
-    "box-title box-title . number-page"
-    "service-content service-content service-content number-page"
-    "service1 service2 service3 number-page"
-  }
 
   .service{
     height: 100px;
@@ -222,10 +213,8 @@
         }
     }
   }
-
   .service__text{
     width: 90%;
-    color: red;
   }
   .service__img{
     width: 10%;
@@ -234,16 +223,15 @@
 
 @media only screen and (max-width: $small){
   .service-content{
-    flex-direction: column;
     position: relative;
+    flex-direction: column-reverse;
   }
   .service__text{
     width: 100%;
   }
   .service__img{
     width: 100%;
-    height: 50px;
-    position: absolute;
+    height: 150px;
     top: 30px;
   }
   .service-fill-cicle{

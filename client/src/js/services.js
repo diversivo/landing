@@ -99,3 +99,18 @@ const serviceClickHandler = (event) => {
 
 const servicesArray = Array.from(document.getElementsByClassName('service'))
 servicesArray.map((s) => s.addEventListener('click', serviceClickHandler, true));
+
+
+// Los servicios se mostraran todos en una columna con tres filas si es que el width del viewport es menor o igual a 580px
+
+// if(window.innerWidth <= 580){
+//   const webContainer = document.createElement('div')
+//   const serviceBox = document.createElement('div')
+
+//   webContainer.className = 'service-web__box';
+//   webContainer.textContent = `<p>hola asdfasdfasdfasdf </p>`;
+
+//   servicesDesc.appendChild(webContainer)
+
+//   console.log(window.innerWidth)
+// }

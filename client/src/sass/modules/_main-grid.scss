@@ -15,7 +15,7 @@
   }
   &-services{
     grid-template-columns: 1fr 1fr 1fr auto;
-    grid-template-rows: auto 1fr 180px;
+    grid-template-rows: auto 450px 180px;
     grid-gap: 1px;
     grid-template-areas:
     "box-title box-title . number-page"
@@ -32,6 +32,9 @@
 }
 
 .service{
+  &-1,&-2,&-3{
+    align-self: end;
+  }
   &-1{
     grid-area: service1
   }
@@ -40,9 +43,6 @@
   }
   &-3{
     grid-area: service3
-  }
-  &-4{
-    grid-area: service4
   }
 }
 
@@ -71,7 +71,7 @@
 @media only screen and (max-width: $medium) and (min-width: $small){
   .grid-services{
     grid-template-columns: 1fr 1fr 1fr auto;
-    grid-template-rows: auto 1fr 100px;
+    grid-template-rows: auto 450px 100px;
     grid-template-areas:
     "box-title box-title . number-page"
     "service-content service-content service-content number-page"
@@ -87,12 +87,12 @@
     }
     &-main{
       grid-template-areas:
-      "hero-title hero-title hero-title hero-image number-page"
+      "hero-title hero-title hero-title hero-title number-page"
       ". . hero-image hero-image number-page"
       ". . . . number-page";
     }
     &-services{
-      grid-template-rows: auto 1fr 50px;
+      grid-template-rows: auto 550px 50px;
     }
     &-contact{
       grid-template-columns: 1fr 1fr auto;
