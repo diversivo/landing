@@ -26,7 +26,7 @@ const servicePresentation =
         <div class="service__text">
             <h1>Desarrollamos tecnología y experiencias en medios digitales.
             </h1>
-            <p>Nuestra filosofía se basa en el trabajo satisfactorio y la felicidad. Por eso tomamos pocos proyectos a la vez; para trabajar de forma intensiva y profunda. Entregando soluciones de calidad y robustas.</p>
+            <p>Nuestra filosofía se basa en el trabajo satisfactorio. Es por eso que tomamos pocos proyectos a la vez; para trabajar de forma intensiva y profunda, entregando soluciones de calidad, robustas y centradas en el usuario.</p>
         </div>
         <div class="service__img">
              <img class="hand-icon" src="${handIcon.src}" alt="hand icon">
@@ -99,3 +99,18 @@ const serviceClickHandler = (event) => {
 
 const servicesArray = Array.from(document.getElementsByClassName('service'))
 servicesArray.map((s) => s.addEventListener('click', serviceClickHandler, true));
+
+
+// Los servicios se mostraran todos en una columna con tres filas si es que el width del viewport es menor o igual a 580px
+
+// if(window.innerWidth <= 580){
+//   const webContainer = document.createElement('div')
+//   const serviceBox = document.createElement('div')
+
+//   webContainer.className = 'service-web__box';
+//   webContainer.textContent = `<p>hola asdfasdfasdfasdf </p>`;
+
+//   servicesDesc.appendChild(webContainer)
+
+//   console.log(window.innerWidth)
+// }

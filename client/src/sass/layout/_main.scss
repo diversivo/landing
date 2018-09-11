@@ -6,29 +6,18 @@
   margin: 0 auto;
   grid-gap: 0px;
   grid-template-columns: 20px auto 20px;
-  grid-template-rows: 80px auto 20px;
+  grid-template-rows: 80px auto 60px;
   background-color: var(--black);
   grid-template-areas:
   ". header ."
   ". main ."
   ". footer ."; 
-
-  header.container__header{
-    grid-area: header;
-    align-self: center;
-    padding: 1rem 0rem;
-    .logo{
-      animation-name: show-from-bottom;
-      animation-duration: 3s;
-      animation-delay: .5s;
-      animation-direction: normal;
-      animation-fill-mode: both;
-    }
-  }
-  footer{
-    grid-area: footer;
-  }
 }
+
+footer{
+  grid-area: footer;
+}
+
 .main__container{
   display: flex;
   flex-direction: column;
@@ -47,7 +36,6 @@
   }
   .main-content{
     margin-top: 1rem;
-    min-height: 60vh;
   }
 }
 .number-page{
@@ -65,7 +53,7 @@ span {
 
 .article__container{
   width: 100%;
-  min-height: 50vh;
+  min-height: 95vh;
 }
 @media only screen and (max-width: $small){
   .main__container{
@@ -73,7 +61,6 @@ span {
   }
   .article__container{
     width: 100%;
-    min-height: 500px;
   }
 }
 
@@ -142,4 +129,39 @@ span {
       animation-delay: 7s;
     }
   }
+}
+
+
+@media only screen and (max-width: 680px){
+  .app{
+      main.container{
+          padding: 1rem;
+      }
+  }
+  .hero-image{
+      img{
+        position: absolute;
+        width: 120%;
+        max-width: 520px;
+        bottom: 30%;
+        right: 50%;
+        left: -10%;
+        animation-name: show-from-bottom-whith-motion;
+        animation-duration: 3.5s;
+        animation-delay: 5s;
+        right: 5%;
+        animation-direction: normal;
+        animation-fill-mode: both;
+        &:nth-child(1){
+          bottom: 10%;
+          right: 1%;
+          animation-delay: 3s;
+        }
+        &:nth-child(3){
+          bottom: 50%;
+          right: 0%;
+          animation-delay: 7s;
+        }
+      }
+    }
 }

@@ -4,16 +4,15 @@
 @import 'base/init';
 @import 'base/elements';
 
+@import 'layout/header';
 @import 'layout/main';
-
+@import 'layout/footer';
 
 @import 'modules/buttons';
 @import 'modules/main-grid';
 @import 'modules/block';
+@import 'modules/contact';
 
 @import 'states/mediaqueries';
 @import 'states/actives';
 @import 'states/animations';
-
-
-@import 'mediaqueries/layout/main-movil';

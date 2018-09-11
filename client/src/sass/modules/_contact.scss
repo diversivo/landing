@@ -1,0 +1,45 @@
+.contact{
+    &__art{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        overflow: visible;
+        img{
+            position: absolute;
+        }
+        img[alt="artbg"]{
+            left: -25%;
+            width: 120%;
+        }
+        img[alt="articon"]{
+            width: 100%;
+            top: 170%;
+        }
+        img[alt="artline"]{
+            left: -20%;
+            width: 120%;
+        }
+    }
+}
+
+@media only screen and(max-width: $small){
+
+.contact{
+    &__art{
+        height: 250px;
+        img[alt="artbg"]{
+            left: -4%;
+            width: 120%;
+        }
+        img[alt="articon"]{
+            width: 100%;
+            top: 20%;
+        }
+        img[alt="artline"]{
+            left: 0%;
+            width: 120%;
+        }
+    }
+}
+
+}

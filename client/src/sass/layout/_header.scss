@@ -1,0 +1,12 @@
+.container__header{
+    grid-area: header;
+    align-self: center;
+    padding: 1rem 0rem;
+    .logo{
+      animation-name: show-from-bottom;
+      animation-duration: 3s;
+      animation-delay: .5s;
+      animation-direction: normal;
+      animation-fill-mode: both;
+    }
+  }
